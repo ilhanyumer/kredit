@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head lang="bg">
+        <meta charset="utf-8">
+        <title>Създай кредит</title>
+    </head>
+    <body>
+        <h1>Създай кредит</h1>
+        <form action="/create-credit-action" method="POST">
+            <label for="full-name-input">Име и фамилия: </label><input type="text" id="full-name-input" autofocus required><br>
+            <label for="amount-input">Сума в лева: </label><input type="number" id="amount-input" required><br>
+            <label for="months-input">Срок в месеца: </label><input type="number" id="months-input" min="3" max="120" step="1" required><br>
+            <input type="submit" value="Създай">
+        </form>
+    </body>
+</html>
