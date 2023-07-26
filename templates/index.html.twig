@@ -8,13 +8,30 @@
     {% include 'navigation.html.twig' %}
 
         <h1>Списък на кредити</h1>
-        <ul>
-            {% if credits is empty %}
-                Няма кредити.
-            {% endif %}
+        {% if credits is empty %}
+            Няма кредити.
+        {% endif %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Име и фамилия</th>
+                    <th>Сума</th>
+                    <th>Месеци</th>
+                    <th>Процент</th>
+                </tr>
+            </thead>
+            <tbody>
             {% for credit in credits %}
-                <li>{{ credit.id }}, {{ credit.fullName }}, {{ credit.amount }} лв., {{ credit.months }} месеца, {{ credit.interestRate }}%</li>
+                <tr>
+                    <td>{{ credit.id }}</td>
+                    <td>{{ credit.fullName }}</td>
+                    <td>{{ credit.amount }} лв.</td>
+                    <td>{{ credit.months }}</td>
+                    <td>{{ credit.interestRate }}%</td>
+                </tr>
             {% endfor %}
-        </ul>
+            </tbody>
+        </table>
     </body>
 </html>
