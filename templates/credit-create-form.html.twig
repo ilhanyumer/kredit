@@ -5,6 +5,8 @@
         <title>Създай кредит</title>
     </head>
     <body>
+        {% include 'navigation.html.twig' %}
+
         <h1>Създай кредит</h1>
         <form action="/create-credit-action" method="POST">
             <label for="full-name-input">Име и фамилия: </label><input type="text" id="full-name-input" name="full-name" autofocus required><br>

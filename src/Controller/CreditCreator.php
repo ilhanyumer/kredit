@@ -17,10 +17,7 @@ class CreditCreator extends AbstractController
      */
     public function showCreditCreatorForm(): Response
     {
-        return $this->render('credit-create-form.html.twig', [
-            'one' => "one",
-            'two' => "two"
-        ]);
+        return $this->render('credit-create-form.html.twig');
     }
 
     /**
