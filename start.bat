@@ -1,0 +1,3 @@
+symfony server:start
+
+pause
