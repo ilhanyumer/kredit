@@ -10,7 +10,13 @@
         <h1>Плащане</h1>
 
         <form action="/pay" method="POST">
-            <label for="credit-id-id">Кредит ID: </label><input type="number" id="credit-id-id" name="credit-id" autofocus required><br>
+            <label for="credit-id-id">Кредит ID: </label>
+            <select id="credit-id-id" name="credit-id">
+                {% for credit in credits %}
+                    <option value="{{ credit.id }}">{{ credit.id }} - {{ credit.fullName }}</option>
+                {% endfor %}
+            </select>
+            <br>
             <label for="amount-input">Сума в лева: </label><input type="number" id="amount-input" name="amount" required min="1"><br>
             <input type="submit" value="Плати">
         </form>
