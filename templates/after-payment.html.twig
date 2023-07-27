@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="bg">
+    <head>
+        <meta charset="utf-8">
+        <title>Ресултат от плащането</title>
+    </head>
+    <body>
+        {% include 'navigation.html.twig' %}
+        <h1>Ресултат от плащането</h1>
+        Токущо платен: {{ paidAmount }} лв.<br>
+        Предишно платени: {{ previouslyTotalPaid }} лв.<br>
+        Общо платено до сега: {{ paidIncludingNowAmount }} лв.<br>
+        Общо трябва да се плати: {{ finalTotalNeededToPay }} лв.<br>
+        Ресто: {{ returnAmount }} лв.<br>
+    </body>
+</html>

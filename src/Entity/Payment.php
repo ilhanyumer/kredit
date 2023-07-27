@@ -22,6 +22,11 @@ class Payment
      */
     private $payment_amount;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $credit_id;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -35,6 +40,18 @@ class Payment
     public function setPaymentAmount(string $payment_amount): self
     {
         $this->payment_amount = $payment_amount;
+
+        return $this;
+    }
+
+    public function getCreditId(): ?int
+    {
+        return $this->credit_id;
+    }
+
+    public function setCreditId(int $credit_id): self
+    {
+        $this->credit_id = $credit_id;
 
         return $this;
     }
